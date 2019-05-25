@@ -24,8 +24,12 @@ const samples = [{
 const testSamples = samples => {
   samples.forEach((sample) => {
     const results = [
+      'Mean:', 
+      ss.mean(sample.data),
       'Standard deviation:', 
       ss.standardDeviation(sample.data),
+      'Sample Variance:', 
+      ss.sampleVariance(sample.data),
       'T student test:',
       ss.tTest(sample.data, 1/2).toFixed(2)  
     ];
