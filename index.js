@@ -1,25 +1,10 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
-const invwk = (function() {
-    const max = Math.pow(2, 32);
-    let seed = null;
+import invwk from './utils/factory/invwkFactory';
+import lfsr from './utils/factory/lfsrFactory';
+import xorShift from './utils/factory/xorShiftFactory';
 
-    return {
-        setSeed: function(val) {
-            seed = val || Math.round(Math.random() * max);
-        },
-        getSeed: function() {
-            return seed;
-        },
-        rand: function() {
-            // creates randomness...somehow...
-            seed += (seed * seed) | 5;
-            // Shift off bits, discarding the sign. Discarding the sign is
-            // important because OR w/ 5 can give us + or - numbers.
-            return (seed >>> 32) / max;
-        }
-    };
-}())
 
-invwk.setSeed()
-console.log(_.range(30).map(x => invwk.rand()))
+console.log(_.range(30).map(x => invwk.random()))
+console.log(_.range(30).map(x => lfsr.random()))
+console.log(_.range(30).map(x => xorShift.random()))
