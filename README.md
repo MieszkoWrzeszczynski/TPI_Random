@@ -1,6 +1,11 @@
 # TPI_Random
 
-## Implemented algorithms
+## Run
+```js
+npm run start 
+```
+
+### Implemented algorithms
 
 * invwk [Theory](https://dl.acm.org/citation.cfm?id=752741)
 * xorShift [Theory](https://en.wikipedia.org/wiki/Xorshift)
