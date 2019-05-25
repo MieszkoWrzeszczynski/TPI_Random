@@ -1,10 +1,12 @@
 {
-  "name": "zadanie2",
+  "name": "TPI_RANDOM",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "simple-statistics": "^7.0.2",
+    "statistical-js": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -14,8 +16,9 @@
     "babel-register": "^6.26.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node run_app.js"
   },
-  "author": "",
+  "author": "Mieszko Wrzeszczyński",
   "license": "ISC"
 }
